@@ -1,0 +1,12 @@
+---
+ - hosts: controlmachine
+   become: true
+   tasks:
+    - name: install tree
+      yum:
+        name: tree
+        state: installed
+    - name: install wget
+      yum:
+        name: wget
+        state: installed
