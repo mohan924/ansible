@@ -1,5 +1,5 @@
 ---
-- hosts: controlmachine
+- hosts: node
   become: true
   tasks:
     - name: install httpd
