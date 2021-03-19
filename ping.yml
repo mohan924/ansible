@@ -1,5 +1,5 @@
 ---
- - hosts: 172.31.46.217
+ - hosts: controlmachine
    become: true
    tasks:
      - name: ping
