@@ -1,6 +1,7 @@
 ---
  - hosts: win
    connection: winrm
+   gatherfacts: no
    tasks:
      - name: Install multiple packages
        win_chocolatey:
