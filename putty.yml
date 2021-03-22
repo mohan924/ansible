@@ -8,13 +8,12 @@
           name:
           - procexp
           - putty
-          - windirstat
           state: present
      - name: Install multiple packages sequentially
-        win_chocolatey:
+       win_chocolatey:
            name: '{{ item }}'
            state: present
-        loop:
-        - procexp
-        - putty
-        - windirstat
+       loop:
+       - procexp
+       - putty
+       
