@@ -1,0 +1,25 @@
+---
+ - hosts: win
+   connection: winrm
+   tasks:
+    - name: install java
+      win_chocolatey:
+         name: java
+         state: present
+    - name: download tomcat server packages
+       win_get_url:
+         url: http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
+         dest: /usr/local/
+    - name: extract tomcat packages
+      win_unarchive:
+         src:  /usr/local/apache-tomcat-8.5.50.tar.gz
+         dest:  /usr/local/
+         remote_src: yes
+    - name: change ownership
+      win_file:
+        path:  /usr/local/apache-tomcat-8.5.50/bin/
+        owner: bin
+        group: bin
+        mode: 0777
+    - name: start tomcat services
+      shell: nohup  /usr/local/apache-tomcat-8.5.50/bin/startup.sh
