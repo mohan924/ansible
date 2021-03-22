@@ -1,0 +1,11 @@
+---
+ - hosts: win
+   become: true
+   tasks:
+     - name: Install multiple packages
+       win_chocolatey:
+          name:
+          - procexp
+          - putty
+          - windirstat
+         state: present
