@@ -4,15 +4,15 @@
    tasks:
      - name: Install multiple packages
        win_chocolatey:
-         name:
-         - procexp
-         - putty
-         - windirstat
-         state: present
+          name:
+          - procexp
+          - putty
+          - windirstat
+          state: present
      - name: Install multiple packages sequentially
        win_chocolatey:
-         name: '{{ item }}'
-         state: present
+          name: '{{ item }}'
+          state: present
        loop:
        - procexp
        - putty
@@ -20,8 +20,8 @@
 
      - name: Uninstall multiple packages
        win_chocolatey:
-         name:
-         - procexp
-         - putty
-         - windirstat
-         state: absent
+          name:
+          - procexp
+          - putty
+          - windirstat
+          state: absent
