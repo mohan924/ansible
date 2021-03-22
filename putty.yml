@@ -10,19 +10,4 @@
           - putty
           - windirstat
           state: present
-     - name: Install multiple packages sequentially
-       win_chocolatey:
-          name: '{{ item }}'
-          state: present
-       loop:
-       - procexp
-       - putty
-       - windirstat
-
-     - name: Uninstall multiple packages
-       win_chocolatey:
-          name:
-          - procexp
-          - putty
-          - windirstat
-          state: absent
+    
