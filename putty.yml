@@ -6,7 +6,6 @@
      - name: Install multiple packages
        win_chocolatey:
           name:
-          - procexp
           - putty
           state: present
      - name: Install multiple packages sequentially
@@ -14,6 +13,8 @@
            name: '{{ item }}'
            state: present
        loop:
-       - procexp
        - putty
-       
+     - name: Upgrade installed packages
+       win_chocolatey:
+          name: all
+          state: latest
