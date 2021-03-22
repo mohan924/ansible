@@ -1,6 +1,6 @@
 ---
  - hosts: win
-   become: true
+   connection: winrm
    tasks:
      - name: Install multiple packages
        win_chocolatey:
