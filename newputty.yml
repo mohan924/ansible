@@ -6,6 +6,7 @@
        win_get_url:
           url: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.74-installer.msi
           dest: C:\temp\putty.msi
+          state: directory
 
      - name: ensure putty is installed via win_package
        win_package:
