@@ -1,0 +1,8 @@
+---
+ - hosts: win 
+   connection: winrm
+   tasks:
+     - name: Download putty to specified path
+       win_get_url:
+          url: https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe
+          dest: C:\Users\RandomUser\putty.exe
