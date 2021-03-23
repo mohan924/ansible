@@ -10,3 +10,7 @@
           state: present
        tags:
        - putty
+     - name: unzip putty
+       win_unzip:
+           src: C:\Program Data\chocolatey\lib\putty.portable
+           dest: C:\Program Files
