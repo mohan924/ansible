@@ -4,7 +4,7 @@
    tasks:
      - name: Install putty and use a file version for the installation check
        win_package:
-          path: 'C:\Desktop\packages\putty-64bit-0.70-installer.msi'
+          path: C:\Desktop\packages\putty-64bit-0.70-installer.msi
           creates_path: C:\Program Files\Putty
           creates_version: 0.70
           state: present
