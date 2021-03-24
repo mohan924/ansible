@@ -5,16 +5,13 @@
      - name: download putty to specified path
        win_get_url:
           url: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.74-installer.msi
-          dest: C:\temp\putty.msi
+          dest: C:\Users\Administrator\Desktop
           state: directory
 
      - name: ensure putty is installed via win_package
        win_package:
-          path: C:\temp\putty.msi
+          path: C:\Users\Administrator\Desktop
           state: present
 
-     - name: ensure putty is not installed via win_package
-       win_package:
-          path: C:\temp\putty.msi
-          state: absent
+     
    
