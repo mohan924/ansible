@@ -5,11 +5,11 @@
      - name: download puttygen to specified path
        win_get_url:
           url: https://the.earth.li/~sgtatham/putty/latest/w32/puttygen.exe
-          dest: C:\Users\Administrator\Desktop\
+          dest: C:\Users\Administrator\Desktop\packages
           state: present
-     - name: ensure putty is installed via win_package
+     - name: ensure puttygen is installed via win_package
        win_package:
-          path: C:\Users\Administrator\Desktop\puttgen.exe
+          path: C:\Users\Administrator\Desktop\packages\puttgen.exe
           state: present
 
      
