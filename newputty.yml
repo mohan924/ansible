@@ -2,14 +2,14 @@
  - hosts: win
    connection: winrm
    tasks:
-     - name: download putty to specified path
+     - name: download puttygen to specified path
        win_get_url:
-          url: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.74-installer.msi
-          dest: C:\Users\Administrator\Desktop
+          url: https://the.earth.li/~sgtatham/putty/latest/w32/puttygen.exe
+          dest: C:\Users\Administrator\Desktop\
           state: present
      - name: ensure putty is installed via win_package
        win_package:
-          path: C:\Users\Administrator\Desktop\putty-64bit-0.74-installer.msi
+          path: C:\Users\Administrator\Desktop\puttgen.exe
           state: present
 
      
