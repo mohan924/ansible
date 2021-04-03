@@ -1,5 +1,5 @@
 ---
- - hosts: node
+ - hosts: node3
    tasks:
      - name: ping
        ping:
