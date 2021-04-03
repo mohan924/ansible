@@ -10,7 +10,7 @@
      - name: ensure puttygen is installed via win_package
        win_package:
           path: C:\Users\Administrator\Desktop\packages\puttgen.exe
-          state: present
+          reboot_required: false
         
 
      
