@@ -1,0 +1,16 @@
+---
+ - hosts: new1,new2,controlmachine
+   become: true
+   tasks:
+     - name: Fetch the file from the new1 to controlmachine
+       run_once: yes
+       fetch:
+         src: /home/new1/f1
+         dest: /home/
+         flat: yes
+
+
+     - name: Copy the file from controlmachine to new2
+       copy:
+         src: /home/f1
+         dest: /home/new2/
